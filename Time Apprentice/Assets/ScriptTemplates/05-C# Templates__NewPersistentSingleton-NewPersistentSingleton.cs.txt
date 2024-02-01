@@ -1,0 +1,15 @@
+using System;
+using System.Collections.Generic;
+using UnityEngine;
+using StdNounou.Core;
+
+public class #SCRIPTNAME# : PersistentSingleton<#SCRIPTNAME#>
+{
+    protected override void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+    }
+    #NOTRIM#
+    protected override void OnSceneUnloaded(Scene scene)
+    {
+    }
+}

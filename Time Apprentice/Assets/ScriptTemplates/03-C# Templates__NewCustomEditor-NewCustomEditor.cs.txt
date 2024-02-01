@@ -1,0 +1,21 @@
+using UnityEditor;
+using StdNounou.Core.Editor;
+#NOTRIM#
+[CustomEditor(typeof(#EDITORSCRIPTNAME#))]
+public class #SCRIPTNAME# : UnityEditor.Editor
+{
+	private #EDITORSCRIPTNAME# targetScript;
+    #NOTRIM#
+	private void OnEnable()
+    {
+        targetScript = (#EDITORSCRIPTNAME#)target;
+    }
+    #NOTRIM#
+    public override void OnInspectorGUI()
+    {
+        ReadOnlyDraws.EditorScriptDraw(typeof(#SCRIPTNAME#), this);
+        base.DrawDefaultInspector();
+        #NOTRIM#
+        serializedObject.ApplyModifiedProperties();
+    }
+}
